@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import AuthService from '../../services/auth'
 
 const Users = () => {
 
@@ -7,8 +7,9 @@ const Users = () => {
 
 	useEffect(() => {
 		try {
-			return await AuthService.users()
+			AuthService.users()
 				.then(response => {
+					console.log(response)
 					setUser(response)
 				})
 				.catch(error => console.error('Users', error))
