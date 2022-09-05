@@ -16,6 +16,14 @@ const signup = data => {
 		})
 }
 
+const users = () => {
+	return axios
+		.get(API_URL + '/users')
+		.then(response => {
+			return response.data
+		})
+}
+
 const login = data => {
 	return axios
 		.post(API_URL + '/login', data)
@@ -40,6 +48,7 @@ const getCurrentUser = () => {
 
 const AuthService = {
 	signup,
+	users,
 	login,
 	logout,
 	getCurrentUser

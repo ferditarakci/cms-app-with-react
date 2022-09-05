@@ -6,10 +6,16 @@ const Users = () => {
 	const [users, setUser] = useState([])
 
 	useEffect(() => {
-		axios.get('/auth/users')
-			.then(response => {
-				setUser(response.data)
-			})
+		try {
+			return await AuthService.users()
+				.then(response => {
+					setUser(response)
+				})
+				.catch(error => console.error('Users', error))
+		}
+		catch (error) {
+			console.error('Users', error)
+		}
 	}, [])
 
 	return (
