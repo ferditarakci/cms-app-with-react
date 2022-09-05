@@ -11,7 +11,8 @@ This project is automatically put into production with Heroku.
 
 Bu proje, Heroku ile otomatik olarak üretime alınıyor. (TR)
 <br><br>
-https://react-cms.ferditarakci.com.tr\
+https://react-cms.ferditarakci.com.tr
+
 https://cms-app-with-react.vercel.app
 
 <br>
