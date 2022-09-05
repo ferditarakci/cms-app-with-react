@@ -1,0 +1,71 @@
+.edit-link {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1.75rem;
+}
+
+.rating {
+	position: relative;
+    font-size: 1.4rem;
+	color: var(--yellow);
+
+	.stars {
+		display: flex;
+
+		.fa-star {
+			display: block;
+		}
+
+		+.stars {
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+
+			.fa-star {
+				opacity: 0;
+			}
+
+			&:hover {
+				.fa-star {
+					opacity: 1;
+
+					&:hover ~ .fa-star {
+						opacity: 0;
+					}
+				}
+			}
+
+			.fa-star.selected {
+				opacity: 1;
+			}
+
+		}
+	}
+}
+
+.article-date {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 3px 5px;
+	font-size: .9rem;
+	color: var(--black);
+	background-color: white;
+}
+
+.total-rating {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: .9rem;
+	color: var(--black);
+}
+
+.my-article {
+	.rating {
+		pointer-events: none;
+		color: var(--gray2);
+	}
+}

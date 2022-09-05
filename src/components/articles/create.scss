@@ -1,0 +1,9 @@
+textarea[name="content"] {
+	display: none;
+}
+
+.editor-wrapper {
+	min-height: 300px;
+	border-radius: 10px;
+	background-color: var(--gray);
+}
