@@ -176,7 +176,7 @@ const Articles = () => {
 						<div className="row">
 							{articles.map(el => (
 								<div key={el.id} className="col-12 col-md-4 mt-3 d-flex">
-									<div className={`card${(el.user_id !== userData.user.id) ? ' my-article' : ''}`}>
+									<div className={`card${(el.user_id === userData.user.id) ? ' my-article' : ''}`}>
 										<div className="position-relative">
 											<NavLink to={`/article/detail/${el.id}`}>
 												<img src="/assets/images/image.jpg" className="card-img-top" alt={el.title} />
